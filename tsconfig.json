@@ -2,10 +2,12 @@
     "compilerOptions": {
       "experimentalDecorators": true,
       "strictPropertyInitialization": false,
+      "emitDecoratorMetadata": true,
       "target": "es6",
       "module": "commonjs",
-      "rootDir": "./",
-      "outDir": "./build",
+      "rootDir": "./src",
+      "outDir": "./dist",
+      "baseUrl": "./src",
       "esModuleInterop": true,
       "strict": true
     }

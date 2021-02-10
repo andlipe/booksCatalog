@@ -1,9 +1,9 @@
 import { Router } from "express";
 
-const booksRouter = Router();
+const BooksRouter = Router();
 
-booksRouter.get('/', async (request, response) => {
-    const books = await booksRepository.find();
-
-    return response.json(books)
+BooksRouter.get('/', async (request, response) => {
+    response.json({ message : 'teste'})
 });
+
+export default BooksRouter;

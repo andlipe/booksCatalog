@@ -1,7 +1,8 @@
 import {
     Entity, 
     PrimaryGeneratedColumn,
-    Column} 
+    Column
+} 
 from 'typeorm';
 
 
