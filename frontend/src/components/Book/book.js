@@ -1,3 +1,4 @@
+import placeholder from '../../assets/images/imageplaceholder.png';
 class Book {
     constructor() {
         this.div = document.createElement('div');
@@ -7,10 +8,11 @@ class Book {
         
         const book = `
             <div id=${id} class="book">
+                <img src=${placeholder} />
+                <span> ${ISBN} </span>
                 <h1> ${title} </h1>
                 <span> ${subtitle} </span>
-                <p> R$ ${price} </p>
-                <p> ${description} </p>
+                <span> R$ ${price} </span>
             </div>
         `
         

@@ -1,0 +1,16 @@
+body {
+    background-color: #E4F3FB;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#rootContainer{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+@import './globalCssReset.scss'

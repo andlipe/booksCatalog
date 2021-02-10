@@ -1,3 +1,5 @@
+import './header.scss';
+
 class Header {
     mount() {
         const header = document.getElementById("headerContainer")

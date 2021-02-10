@@ -1,5 +1,5 @@
 import { router } from "./routes/routes";
-import './assets/scss/globalCssReset.scss'
+import './assets/scss/styles.scss'
 
 const init = () => {
     router(window.location.hash);

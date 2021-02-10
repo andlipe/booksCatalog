@@ -1,8 +1,7 @@
 import Header from "../../../components/Header/header";
 import Book from "../../../components/Book/book";
 import ListBookService from "../services/ListBooksService";
-import '../assets/scss/styles.scss'
-
+import '../assets/scss/home.scss';
 class HomeController {
     async mount() {
         const header = new Header();
