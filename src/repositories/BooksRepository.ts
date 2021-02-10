@@ -1,7 +1,7 @@
 import { getRepository, Repository } from 'typeorm';
 
 import Book from '../Database/Entities/book';
-import IBookRepository from './IBookRepository';
+import IBooksRepository from './IBooksRepository';
 
 interface ICreateBookDTO {
     ISBN: string;
@@ -13,19 +13,19 @@ interface ICreateBookDTO {
 
 
 
-class BooksRepository implements IBookRepository {
+class BooksRepository implements IBooksRepository {
     private ormRepository: Repository<Book>;
     constructor() {
     this.ormRepository = getRepository(Book);
     }
 
-    public async findById(id: string): Promise<Book | undefined> {
-    const book = await this.ormRepository.findOne(id);
+    public async findAll(): Promise<Book[]> {
+    const book = await this.ormRepository.find();
     return book;
     }
 
-    public async findByTitle(title: string): Promise<Book | undefined> {
-    const book = await this.ormRepository.findOne({where: {title}});
+    public async findByISBN(ISBN: string): Promise<Book | undefined> {
+    const book = await this.ormRepository.findOne({where: {ISBN}});
     return book;
     }
 
