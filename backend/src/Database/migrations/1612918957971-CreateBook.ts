@@ -34,8 +34,8 @@ export class CreateBook1612918957971 implements MigrationInterface {
                         isNullable: false,
                     },
                     {
-                        name: 'resume',
-                        type: 'varchar(300)',
+                        name: 'description',
+                        type: 'varchar(1000)',
                         isNullable: false,
                     }
                 ]
