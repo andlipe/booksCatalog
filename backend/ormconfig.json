@@ -3,9 +3,13 @@
     "database": "database.sqlite",
     "synchronize": true,
     "logging": false,
-    "entities": ["./src/Database/Entities/*.ts"],
-    "migrations": ["./src/Database/migrations/*.ts"],
+    "entities": [
+      "./src/modules/**/infra/typeorm/Entities/*.ts"
+    ],
+    "migrations": [
+      "./src/shared/infra/typeorm/migrations/*.ts"
+    ],
     "cli": {
-      "migrationsDir": "./src/Database/migrations/"
+      "migrationsDir": "./src/shared/infra/typeorm/migrations"
     }
   }

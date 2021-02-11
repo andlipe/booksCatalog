@@ -1,6 +1,6 @@
-import IBooksRepository from 'repositories/IBooksRepository';
+import IBooksRepository from '@modules/books/repositories/IBooksRepository';
 import { injectable, inject } from 'tsyringe';
-import Book from '../Database/Entities/book';
+import Book from '@modules/books/infra/typeorm/Entities/book';
 
 interface IRequest {
     ISBN: string;

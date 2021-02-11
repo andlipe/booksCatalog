@@ -1,7 +1,7 @@
 import { getRepository, Repository } from 'typeorm';
 
-import Book from '../Database/Entities/book';
-import IBooksRepository from './IBooksRepository';
+import Book from '@modules/books/infra/typeorm/Entities/book';
+import IBooksRepository from '@modules/books/repositories/IBooksRepository';
 
 interface ICreateBookDTO {
     ISBN: string;

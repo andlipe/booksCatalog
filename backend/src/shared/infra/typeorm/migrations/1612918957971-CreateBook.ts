@@ -5,7 +5,7 @@ export class CreateBook1612918957971 implements MigrationInterface {
     public async up(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.createTable(
             new Table({
-                name: 'books',
+                name: 'book',
                 columns: [
                     {
                         name: 'id',

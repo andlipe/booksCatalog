@@ -1,8 +1,8 @@
 import express from 'express';
 import cors from 'cors';
-import './Database/connection';
+import '../typeorm/connection';
 import routes from './routes';
-import './containers';
+import '@shared/containers';
 const app = express();
 app.use(cors());
 app.use(express.json());

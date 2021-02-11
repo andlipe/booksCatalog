@@ -1,4 +1,4 @@
-import Book from "../Database/Entities/book";
+import Book from "@modules/books/infra/typeorm/Entities/book";
 
 
 export default interface IBooksRepository {

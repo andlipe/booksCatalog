@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
-import CreateBookService from '../service/CreateBookService';
+import CreateBookService from '@modules/books/service/CreateBookService';
 import { container } from 'tsyringe';
-import ListBooksService from '../service/ListBooksService';
+import ListBooksService from '@modules/books/service/ListBooksService';
 
 export default class BooksController {
   public async create(req: Request, res: Response): Promise<Response> {
