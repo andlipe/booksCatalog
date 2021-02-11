@@ -3,28 +3,47 @@ import Book from "../../../components/Book/book";
 import ListBookService from "../services/ListBooksService";
 import '../assets/scss/home.scss';
 import Modal from "../../../components/Modal/Modal";
+import bookSvg from '../../../assets/images/undraw_book_lover_mkck.svg';
 class HomeController {
-    async mount() {
-        const header = new Header();
-        const bookComponent = new Book();
-        const listBookService = new ListBookService();
-        const modal = new Modal();
-        const rootContainer = document.getElementById("rootContainer");
+    constructor() {
+        this.header = new Header();
+        this.bookComponent = new Book();
+        this.listBookService = new ListBookService();
+        this.modal = new Modal();
+        this.rootContainer = document.getElementById("rootContainer");
 
-        const books = await listBookService.execute();
-        header.mount();
-        rootContainer.innerHTML += modal.mount();
+    }
+
+    async mount() {
+        const books = await this.listBookService.execute();
+        this.mountPageLayout();
+        const bookContainer = document.getElementById("bookContainer")
+
         books.map(book => {
-            rootContainer.innerHTML += bookComponent.mount(book)
+            bookContainer.innerHTML += this.bookComponent.mount(book)
         })
         
         books.map(book => {
-            bookComponent.handleOpenBookModal(book);
+            this.bookComponent.handleOpenBookModal(book);
         })
-        modal.handleCloseModal();
-
+        this.modal.handleCloseModal();
+        return this.rootContainer;
     }
     
+    mountPageLayout() {
+        const svgBook = `
+        <div id="bookImg">
+            <img src=${bookSvg}>
+        </div>
+        `;
+        const createBookContainer = `<div id="bookContainer"></div>`;
+        this.rootContainer.innerHTML = svgBook;
+        this.rootContainer.innerHTML += createBookContainer;
+        this.rootContainer.innerHTML += this.modal.mount();
+        this.header.mount();
+
+        return this.rootContainer;
+    }
 
 
 

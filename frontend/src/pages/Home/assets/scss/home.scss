@@ -1,6 +1,31 @@
 #rootContainer {
     margin-top: 2em;
-    
+    flex-direction: column;
+
+    #bookImg {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+            width: 60%;
+        }
+    }
+
+    #bookContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: fit-content;
+    }
+
+    @media (min-width: 768px) {
+        #bookContainer {
+            align-items: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
 }
 
 

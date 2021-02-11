@@ -24,14 +24,16 @@ class Book {
     handleOpenBookModal(data) {
         document.getElementById(data.id).addEventListener('click', () => {
             const modalData = `
-                <img src=${placeholder} />
-                <div> 
+                <div class="bookCover">
+                    <img src=${placeholder} />
+                </div>
+                <div class="bookInfo"> 
                     <span> ${data.ISBN} </span>
                     <h1> ${data.title} </h1>
                     <span> ${data.subtitle} </span>
-                    <p> ${data.description} </p>
                     <span> R$ ${data.price} </span>
                 </div>
+                <p> ${data.description} </p>
             `;
 
             const modalContent = document.getElementById('modalContent');
