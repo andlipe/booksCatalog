@@ -23,6 +23,7 @@ npm install -g yarn
 ```
 node-gyp instalado
 https://github.com/nodejs/node-gyp/blob/master/README.md
+Pré requisito para o sqlite3
 ## Instalação
 
 1. Clone esse repositório
@@ -57,7 +58,7 @@ http://localhost:3000
 ```
 frontend:
 ```
-http://0.0.0.0:9000
+http://localhost:9000
 ```
 6.  Para rodar os testes de backend:
 ```
