@@ -1,11 +1,16 @@
+@import './globalCssReset.scss';
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
+*{
+}
 
 body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
     background-color: #E4F3FB;
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: Roboto, "Helvetica Neue", "Helvetica";
+    
 }
 
 #rootContainer{
@@ -16,4 +21,3 @@ body {
     align-items: center;
 }
 
-@import './globalCssReset.scss'
