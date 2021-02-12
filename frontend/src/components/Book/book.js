@@ -25,7 +25,7 @@ class Book {
         document.getElementById(data.id).addEventListener('click', () => {
             const modalData = `
                 <div class="bookCover">
-                    <img src=${require(`../../assets/images/${data.ISBN}.png`).default} />
+                    <img src=${require(`../../assets/images/${data.ISBN}.png`)} />
                 </div>
                 <div class="bookInfo"> 
                     <span> ${data.ISBN} </span>
