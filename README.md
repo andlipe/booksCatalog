@@ -17,10 +17,12 @@ npm
 ```sh
 npm install npm@latest -g
 ```
-yarn
+Yarn
 ```
 npm install -g yarn
 ```
+node-gyp instalado
+https://github.com/nodejs/node-gyp/blob/master/README.md
 ## Instalação
 
 1. Clone esse repositório
