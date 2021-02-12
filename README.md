@@ -1,5 +1,5 @@
 # Bookshelf
-
+<img src="https://i.imgur.com/4uMDtP4.png" width=500 />
 ## Sobre o Projeto
 
 Nesse projeto foi criado uma SPA para listar livros. Foi criado no backend uma api utilizando NodeJS/Express/Typescript, pensada para ser escalavel, onde é feita a criação e listagem de Livros utilizando SQLITE. No front-end foi utilizado VanillaJS/Webpack/Sass para realizar a integração com a api, foi pensado em um modelo de pastas que pudesse ser escálavel para futuras novas features.
